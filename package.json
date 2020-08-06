@@ -5,13 +5,17 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "dev:build": "webpack --watch",
+    "dev:server": "echo \"Hallo liebe Leute\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^4.2.0",
+    "file-loader": "^6.0.0",
+    "live-server": "^1.2.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
