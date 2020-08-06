@@ -3,6 +3,7 @@ import { createToggleButton } from "./components/toggleButton";
 import { createTitle } from "./components/title.js";
 import { createElement } from "./utils/elements";
 import { getJoke } from "./api/joke";
+import { createCard } from "./components/card";
 
 const title = createTitle();
 const toggleButton = createToggleButton();
@@ -13,6 +14,14 @@ const fetchButton = createElement("button", {
 
 fetchButton.addEventListener("click", async () => {
   const joke = await getJoke();
+  //console.log(joke);
+  const card = createCard({
+    title: `Funny joke: ${joke.id}`,
+    setup: joke.setup,
+    punchline: joke.punchline,
+  });
+
+  document.body.append(card);
   console.log(joke);
 });
 
