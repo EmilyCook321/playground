@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev:build": "webpack --watch",
-    "dev:server": "echo \"Hallo liebe Leute\""
+    "dev:server": "live-server dist"
   },
   "keywords": [],
   "author": "",
